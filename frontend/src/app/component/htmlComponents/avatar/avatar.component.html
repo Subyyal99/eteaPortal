@@ -1,0 +1,15 @@
+<ng-container *ngIf="type == 'groupAvatars'">
+  <p-avatarGroup>
+    <ng-container *ngFor="let avatar of displayedAvatars">
+      <p-avatar [image]="avatar" [size]="avatarSize" shape="circle"></p-avatar>
+    </ng-container>
+    <ng-container *ngIf="remainingAvatarCount != 0">
+      <p-avatar
+        [label]="'+' + remainingAvatarCount"
+        shape="circle"
+        [size]="avatarSize"
+        [style]="{ 'background-color': '#9c27b0', color: '#ffffff' }"
+      ></p-avatar>
+    </ng-container>
+  </p-avatarGroup>
+</ng-container>

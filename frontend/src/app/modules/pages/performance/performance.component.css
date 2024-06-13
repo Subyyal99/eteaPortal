@@ -1,0 +1,319 @@
+.performance{
+    background: #F8F8F8;
+}
+.performance-heading h2{
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(28px, 3vw, 32px);
+    line-height: 39px;
+    text-transform: capitalize;
+    color: #000000;
+    margin-left: 20px;
+    padding-top: 17px;
+}
+.performance-date{
+    font-style: normal;
+    font-weight: 300;
+    font-size: clamp(16px, 3vw, 20px);
+    line-height: 24px;
+    text-transform: capitalize;
+    color: #989898;
+    margin-left: 24px;
+    padding-top: 19px;
+}
+.sections{
+    display: flex;
+    flex-direction: row;
+    gap: 53px;
+    flex-wrap: wrap;
+}
+/* Card Image */
+.card-section::ng-deep .p-card-header{
+    display: flex;
+    justify-content: center;
+}
+.card-section::ng-deep img.card-image.ng-star-inserted{
+    width: 100px;
+    height: 100px;
+    border-radius: 80px;
+    margin-top: 28px;
+}
+.card-section::ng-deep .p-card-shadow.p-card.p-component{
+    width: 322px;
+    height: 360px;
+    background: #FFFFFF;
+    box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    margin-left: 19px;
+}
+/* card name designation and department  */
+.card-section::ng-deep .p-card-title{
+    font-style: normal;
+    font-weight: 600;
+    font-size: clamp(14px, 3vw, 16px);
+    line-height: 24px;
+    text-transform: capitalize;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+}
+.card-section::ng-deep .p-card-subtitle{
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(10px, 3vw, 13px);
+    line-height: 16px;
+    text-transform: capitalize;
+    color: #616161;
+    margin-top: -8px;
+    display: flex;
+    justify-content: center;
+}
+.card-section::ng-deep .cardpara{
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(10px, 3vw, 13px);
+    line-height: 16px;
+    text-transform: capitalize;
+    color: #616161;
+    margin-top: -18px;
+    display: flex;
+    justify-content: center;
+}
+.card-section::ng-deep .person-email{
+    display: flex;
+    gap: 22px;
+    align-items: baseline;
+    padding-top: 14px;
+    padding-left: 20px;
+}
+.card-section::ng-deep i.fa.fa-envelope{
+    font-size: clamp(16px, 3vw, 20px);
+}
+.card-section::ng-deep .person-number{
+    display: flex;
+    gap: 22px;
+    align-items: baseline;
+    padding-left: 20px;
+}
+.card-section::ng-deep i.fa.fa-phone{
+    font-size: clamp(16px, 3vw, 20px);
+}
+.card-section::ng-deep .person-location{
+    display: flex;
+    gap: 22px;
+    align-items: baseline;
+    padding-left: 20px;
+}
+.card-section::ng-deep i.fas.fa-map-marker-alt{
+    font-size: clamp(16px, 3vw, 20px);
+}
+
+/* Task serction */
+
+.task-heading h2{
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(16px, 3vw, 20px);
+    line-height: 24px;
+    text-transform: capitalize;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+.task{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.flex{
+    /* display: flex;
+    flex-direction: column; */
+}
+.task-section{
+    background: #FFFFFF;
+    box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    height: 360px;
+    padding: 1rem;
+    flex-grow: 1;
+    margin-right: 7rem;
+}
+.task-data{
+    padding-left: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 45px;
+    /* padding-bottom: 19px;
+    padding-right: 88px; */
+}
+.task-section::ng-deep i.fa.fa-user-tie{
+    font-size: clamp(26px, 3vw, 30px);
+    color: #7FBB00;
+}
+.data{
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(14px, 3vw, 16px);
+    line-height: 19px;
+    text-transform: capitalize;
+    color: #ABABAB;
+    display: flex;
+    flex-grow: 2;
+}
+.number{
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(14px, 3vw, 16px);
+    line-height: 19px;
+    text-transform: capitalize;
+    color: #ABABAB;
+    /* padding-left: 59px; */
+}
+.task-section::ng-deep i.fa.fa-clipboard-list{
+    color: #FE443C;
+    font-size: clamp(28px, 3vw, 34px);
+}
+.task-section::ng-deep i.fa.fa-hourglass-half {
+    color: #00B5D1;
+    font-size: clamp(28px, 3vw, 34px);
+}
+.task-data img{
+    width: 30px;
+    height: 30px;
+}
+/* Graphs start */
+.Graphs{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.firstChart-heading h2{
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(16px, 3vw, 20px);
+    line-height: 24px;
+    color: #000000;
+    padding-top: 28px;
+    padding-left: 44px;
+}
+.firstChart{
+    background: #FFFFFF;
+    box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-top: 60px;
+    margin-left: 19px;
+}
+.firstProgress{
+    background: #FFFFFF;
+    box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    width: 501px;
+    height: 380px;
+    margin-top: 60px;
+    margin-left: 30px;
+}
+.firstProgress h2{
+    font-style: normal;
+    font-weight: 600;
+    font-size: clamp(16px, 3vw, 20px);
+    line-height: 24px;
+    text-transform: capitalize;
+    color: #04425D;
+    padding-top: 43px;
+    padding-left: 34px;
+}
+.border{
+    border: 1px solid rgba(4, 66, 93, 0.15);
+    border-radius: 20px;
+    margin-top: 18px;
+    margin-left: 68px;
+    margin-right: 77px;
+}
+.knob{
+    display: flex;
+    justify-content: center;
+    padding-top: 9px;
+}
+.update{
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(15px, 3vw, 17px);
+    line-height: 21px;
+    text-align: center;
+    color: #000000;
+}
+.task{
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(12px, 3vw, 15px);
+    line-height: 18px;
+    text-align: center;
+    color: #A9A9A9;
+    row-gap: 2rem;
+}
+.assigned{
+    display: flex;
+    flex-direction: row;
+    padding-left: 3rem;
+    padding-bottom: 28px;
+    padding-top: 23px;
+}
+.assign-task{
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(13px, 3vw, 17px);
+    line-height: 21px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #000000;
+    margin-left: 6.5px;
+}
+.assign-day{
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(13px, 3vw, 17px);
+    line-height: 21px;
+    text-align: center;
+    color: #A0A7B1;
+    margin-left: 40px;
+}
+.employImg{
+    width: 20px;
+    height: 20px;
+    border-radius: 30px;
+}
+.secondChart{
+    background: #FFFFFF;
+    box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-top: 22px;
+    margin-left: 19px;
+    height: 407px;
+    padding-top: 6.5rem;
+}
+.secondProgress{
+    background: #FFFFFF;
+    box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    width: 501px;
+    height: 407px;
+    margin-top: 22px;
+    margin-left: 30px;
+}
+.secondProgress-heading h2{
+    font-style: normal;
+    font-weight: 600;
+    font-size: clamp(16px, 3vw, 20px);
+    line-height: 24px;
+    text-transform: capitalize;
+    color: #04425D;
+    padding-top: 43px;
+    padding-left: 34px;
+}

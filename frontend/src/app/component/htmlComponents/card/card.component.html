@@ -1,0 +1,159 @@
+<ng-container *ngIf="!type">
+  <p-card
+    [header]="cardHeader"
+    subheader="{{ cardSubHeader }}"
+    styleClass="p-card-shadow"
+    [style]="{ background: cardBackground }"
+  >
+    <ng-template pTemplate="header">
+      <ng-container *ngIf="cardImage">
+        <img class="card-image" alt="Card Image" [src]="cardImage" />
+      </ng-container>
+    </ng-template>
+    <p class="cardpara">
+      {{ cardPara }}
+    </p>
+    <ng-container *ngIf="cardFooterFlag">
+      <ng-template pTemplate="footer">
+        <ng-container *ngIf="buttons">
+          <p-button label="Save" icon="pi pi-check"></p-button>
+          <p-button
+            label="Cancel"
+            icon="pi pi-times"
+            styleClass="p-button-secondary"
+            [style]="{ 'margin-left': '.5em' }"
+          ></p-button>
+        </ng-container>
+      </ng-template>
+    </ng-container>
+  </p-card>
+</ng-container>
+
+<ng-container *ngIf="type == 'addDepartment'">
+  <p-card
+    [header]="cardHeader"
+    subheader="{{ cardSubHeader }}"
+    styleClass="p-card-shadow"
+    [style]="{ background: cardBackground }"
+  >
+    <ng-template pTemplate="header">
+      <div class="addDepartmentCardButton">
+        <app-button
+          [type]="'roundTextIconBtn'"
+          [bgColor]="'#e4f1fa'"
+          [icon]="'pi pi-plus'"
+          [padding]="'2rem'"
+          (button)="buttonClicked('add')"
+        ></app-button>
+      </div>
+    </ng-template>
+  </p-card>
+</ng-container>
+
+<ng-container *ngIf="type == 'showDepartment'">
+  <p-card
+    [header]="
+      cardHeader.length > 40
+        ? (cardHeader | slice : 0 : 40) + ' ...'
+        : cardHeader
+    "
+    subheader="{{ cardSubHeader }}"
+    styleClass="p-card-shadow"
+    [style]="{ background: cardBackground }"
+  >
+    <ng-template pTemplate="header">
+      <div class="departmentCard-toolbar">
+        <div class="dt-edit">
+          <app-button
+            [type]="'roundTextIconBtn'"
+            [icon]="'pi pi-pencil'"
+            (button)="buttonClicked('edit', cardId)"
+          ></app-button>
+        </div>
+        <div class="dt-delete">
+          <app-button
+            [type]="'roundTextIconBtn'"
+            [icon]="'pi pi-trash'"
+            (click)="onClick($event)"
+          ></app-button>
+          <app-confirm-popup
+            *ngIf="confirmPopupData"
+            [popupData]="confirmPopupData"
+            (confirmationResult)="
+              onConfirmationResult('delete', cardId, $event)
+            "
+          ></app-confirm-popup>
+        </div>
+      </div>
+    </ng-template>
+    <p class="cardpara">
+      <span class="totalEmployees">
+        <span>Total Employees</span>
+        <span>
+          {{ cardPara.totalEmployees }}
+        </span>
+      </span>
+      <span class="actimeEmployees">
+        <span>Active Employees</span>
+        <span>
+          {{ cardPara.actimeEmployees }}
+        </span>
+      </span>
+      <span class="inActiveEmployees">
+        <span>In-Active Employees</span>
+        <span>
+          {{ cardPara.inActimeEmployees }}
+        </span>
+      </span>
+    </p>
+
+    <ng-container *ngIf="cardFooterFlag">
+      <ng-template pTemplate="footer">
+        <app-avatar
+          [type]="'groupAvatars'"
+          [avatars]="avatarImages"
+          [avatarSize]="''"
+          [avatarsToShow]="avatarsToShow"
+        ></app-avatar>
+      </ng-template>
+    </ng-container>
+  </p-card>
+</ng-container>
+
+<ng-container *ngIf="type == 'profileDetailCard'">
+  <p-card
+    [header]="cardHeader"
+    subheader="{{ cardSubHeader }}"
+    styleClass="p-card-shadow"
+    [style]="{ background: cardBackground }"
+  >
+    <ng-template pTemplate="header">
+      <ng-container *ngIf="cardImage">
+        <img class="card-image" alt="Card Image" [src]="cardImage" />
+      </ng-container>
+    </ng-template>
+    <div>
+      <p class="cardpara">
+        {{ cardPara }}
+      </p>
+    </div>
+    <div class="person-email">
+      <i class="fa fa-envelope" style="color: #0078d4"></i>
+      <p class="email">
+        {{ cardEmail }}
+      </p>
+    </div>
+    <div class="person-number">
+      <i class="fa fa-phone fa-rotate-90" style="color: #0078d4"></i>
+      <p class="number">
+        {{ cardNumber }}
+      </p>
+    </div>
+    <div class="person-location">
+      <i class="fas fa-map-marker-alt" style="color: #0078d4"></i>
+      <p class="location">
+        {{ cardLocation }}
+      </p>
+    </div></p-card
+  ></ng-container
+>

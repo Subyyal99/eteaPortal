@@ -1,0 +1,28 @@
+<div class="comment">
+  <ng-container *ngFor="let input of inputInfo">
+    <ng-container [ngSwitch]="input.type">
+      <app-text-box
+        *ngSwitchCase="'text2'"
+        [inputInfo]="input"
+        [changeFlag]="this.changeFlag"
+        (updateData)="updateData($event, input.modelName)"
+        (preSubmit)="preSubmit()"
+        (submit)="onSubmit()"
+      >
+      </app-text-box>
+
+      <app-file-upload
+        *ngSwitchCase="'uploader'"
+        [inputInfo]="input"
+        [changeFlag]="this.changeFlag"
+        (submit)="onSubmit()"
+        (dataReady)="updateData($event, input.modelName)"
+        [minWidth]="'150px'"
+        [clear]="this.dynamicClear"
+      ></app-file-upload>
+    </ng-container>
+  </ng-container>
+  <button (click)="preSubmit()" type="submit" class="btn btn-primary">
+    {{ submitLabel }}
+  </button>
+</div>

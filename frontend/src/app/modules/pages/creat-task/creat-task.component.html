@@ -1,0 +1,33 @@
+<!-- <head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.0/primeng.min.css"
+    integrity="sha512-..."
+    crossorigin="anonymous"
+  />
+
+  <link rel="stylesheet" href="https://cdn.quilljs.com/1.3.6/quill.snow.css" />
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.0/primeng.min.js"
+    integrity="sha512-..."
+    crossorigin="anonymous"
+  ></script>
+
+  <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+</head> -->
+
+<div class="create-task">
+  <div class="create-task-heading">
+    <h2>Create task</h2>
+  </div>
+  <section class="form-section">
+    <div class="form-section-area">
+      <app-dynamic-form
+        [inputInfo]="inputInfo"
+        (formData)="onSubmit($event)"
+        (searchFor)="updateSearch($event)"
+      ></app-dynamic-form>
+    </div>
+  </section>
+</div>

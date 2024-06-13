@@ -1,0 +1,276 @@
+.all-task {
+  background: #f8f8f8;
+}
+.all-task-heading h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  text-transform: capitalize;
+  color: #000000;
+  margin-left: 20px;
+  padding-top: 17px;
+}
+.table-section {
+  padding-left: 74px;
+  padding-right: 102px;
+  /* padding-bottom: 88px; */
+  padding-top: 49px;
+}
+.table-section-area {
+  background: #ffffff;
+  box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+}
+.all-task-table {
+  padding-left: 76px;
+  padding-right: 60px;
+  /* padding-bottom: 60px; */
+  padding-top: 25px;
+}
+.all-task-table::ng-deep
+  .p-datatable.p-datatable-gridlines
+  .p-datatable-thead
+  > tr
+  > th {
+  border-width: 0px 0 1px 0px !important;
+  border: 1px solid rgba(0, 59, 255, 0.3);
+  font-size: 16px;
+}
+.all-task-table::ng-deep tbody.p-element.p-datatable-tbody {
+  border-width: 1px 1px 1px;
+  border-color: rgba(0, 59, 255, 0.3);
+}
+.all-task-table::ng-deep .text-center {
+  text-align: start !important;
+}
+.all-task-table::ng-deep .justify-content-center {
+  justify-content: start !important;
+}
+.all-task-table::ng-deep th.ng-tns-c147-1.ng-star-inserted {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: capitalize;
+  color: #000000;
+}
+.all-task-table::ng-deep
+  .p-datatable.p-datatable-gridlines:has(.p-datatable-thead):has(
+    .p-datatable-tbody
+  )
+  .p-datatable-tbody
+  > tr
+  > td {
+  border-width: 0 0 0px 0px;
+}
+.all-task-table::ng-deep
+  .p-datatable.p-datatable-gridlines:has(.p-datatable-thead):has(
+    .p-datatable-tbody
+  )
+  .p-datatable-tbody
+  > tr
+  > td:last-child {
+  border-width: 0px 0px 0px 0px;
+}
+.all-task-table::ng-deep span.ng-tns-c147-1.ng-star-inserted {
+  color: red;
+}
+.all-task-table::ng-deep
+  .p-datatable.p-datatable-gridlines
+  .p-datatable-header {
+  border-width: 0px 0px 0 0px;
+  padding-bottom: 36px;
+}
+.all-task-table::ng-deep i.pi.pi-search.ng-tns-c149-2 {
+  top: 23px;
+}
+.all-task-table::ng-deep .p-input-icon-left > .p-inputtext {
+  width: 213px;
+  background: #ffffff;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #909090;
+  text-align: left;
+  height: 33px;
+  margin-top: 7px;
+}
+.all-task-table::ng-deep .dropdown-container {
+  display: flex;
+  justify-content: end;
+}
+.all-task-table::ng-deep .dropdown-container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: -6px;
+}
+.all-task-table::ng-deep .dropdown-container .p-dropdown.p-component {
+  width: 154px;
+  height: 33px;
+  box-sizing: border-box;
+  border: 1px solid #d6d6d6;
+  align-items: center;
+}
+.all-task-table::ng-deep .p-fluid.p-grid.p-formgrid {
+  padding-top: 9px;
+}
+.all-task-table::ng-deep .p-inputtext.p-component.ng-star-inserted {
+  font-size: 14px;
+  font-weight: 600;
+  width: 140px;
+  height: 33px;
+  box-sizing: border-box;
+  border: 1px solid #d6d6d6;
+}
+.all-task-table::ng-deep .p-dropdown .p-dropdown-label.p-placeholder {
+  color: #909090 !important;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: capitalize;
+  padding-top: 14px;
+}
+.all-task-table::ng-deep
+  input.ng-tns-c83-4.p-inputtext.p-component.ng-star-inserted {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: left;
+  text-transform: capitalize;
+  color: #909090;
+}
+.all-task-table::ng-deep i.pi.pi-search.ng-tns-c148-1 {
+  color: #909090 !important;
+  top: 17px;
+}
+.all-task-table::ng-deep span#pr_id_4_label {
+  padding-top: 15px;
+  color: #909090;
+  font-weight: 600;
+}
+.all-task-table::ng-deep span#pr_id_6_label {
+  padding-top: 15px;
+  color: #909090;
+  font-weight: 600;
+}
+.all-task-table::ng-deep tr.ng-tns-c148-1.ng-star-inserted {
+  font-size: 16px;
+}
+/* Excel Button Css */
+.all-task-table::ng-deep
+  button.p-element.p-button-outlined.ml-3.ng-tns-c149-2.p-button.p-component {
+  height: 37px;
+}
+/* clear Button css */
+.all-task-table::ng-deep
+  button.p-element.p-button-outlined.ng-tns-c149-2.p-button.p-component {
+  height: 37px;
+}
+@media only screen and (max-width: 1099px) {
+  .all-task-table::ng-deep .dropdown-container .p-dropdown.p-component {
+    width: 133px;
+  }
+  .all-task-table::ng-deep .p-inputtext.p-component.ng-star-inserted {
+    width: 133px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .table-section {
+    padding-right: 75px;
+  }
+}
+@media only screen and (max-width: 822px) {
+  .table-section {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .all-task-table {
+    padding-left: 55px;
+    padding-right: 50px;
+  }
+}
+@media only screen and (max-width: 729px) {
+  .all-task-table {
+    padding-left: 45px;
+    padding-right: 40px;
+  }
+  .all-task-table::ng-deep .dropdown-container {
+    gap: 22px;
+  }
+}
+@media only screen and (max-width: 424px) {
+  .all-task-table::ng-deep .p-input-icon-left > .p-inputtext {
+    width: 200px;
+  }
+  .all-task-table {
+    padding-left: 35px;
+    padding-right: 30px;
+  }
+}
+@media only screen and (max-width: 390px) {
+  .all-task-table::ng-deep .p-input-icon-left > .p-inputtext {
+    width: 135px;
+  }
+}
+/* @media only screen and (max-width: 1626px){
+.all-task-table::ng-deep .p-input-icon-left > .p-inputtext{
+    width: 200px;
+}
+.all-task-table::ng-deep .dropdown-container{
+    gap: 30px;
+}
+.all-task-table::ng-deep i.pi.pi-search.ng-tns-c149-2{
+    left: 3.5rem;
+}
+}
+@media only screen and (max-width: 1574px){
+.all-task-table::ng-deep .p-input-icon-left > .p-inputtext{
+    width: 170px;
+    font-size: 14px;
+}
+.all-task-table::ng-deep .dropdown-container{
+    gap: 30px;
+}
+.all-task-table::ng-deep i.pi.pi-search.ng-tns-c149-2{
+    left: 3.5rem;
+    font-size: 14px;
+}
+}
+@media only screen and (max-width: 1538px){
+.all-task-table::ng-deep .dropdown-container .p-dropdown.p-component {
+    width: 133px;
+}
+.all-task-table::ng-deep.dropdown-container span.ng-tns-c83-5.p-calendar{
+    width: 133px;
+}
+
+}
+@media only screen and (max-width: 1492px){
+.all-task-table::ng-deep .dropdown-container{
+    gap: 22px;
+}
+}
+@media only screen and (max-width: 1458px){
+.all-task-table::ng-deep .p-input-icon-left > .p-inputtext{
+    width: 150px;
+    font-size: 13px;
+    margin-left: -20px;
+}
+.all-task-table::ng-deep .dropdown-container{
+        gap: 22px;
+}
+.all-task-table::ng-deep i.pi.pi-search.ng-tns-c149-2{
+    left: 1.7rem;
+    font-size: 13px;
+    top: 25px;
+}
+} */

@@ -1,0 +1,219 @@
+.user-dashboard {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: var(--main-bg-color);
+}
+
+.user-dashboard-heading h3 {
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
+  font-weight: 700;
+}
+
+@media (min-width: 1400px) {
+  .user-dashboard-heading h3 {
+    font-size: clamp(1.8rem, 3vw, 2rem);
+  }
+}
+
+.user-dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 2rem 3rem;
+  padding-top: 1.9rem;
+}
+
+@media (min-width: 1400px) {
+  .user-dashboard-cards {
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+  }
+}
+
+/* card styling  */
+.user-dashboard-card ::ng-deep .p-card {
+  font-family: "Inter";
+  font-size: clamp(10px, 3vw, 12px);
+  font-weight: 800;
+  box-shadow: -4px 4px 8px 0px rgba(0, 0, 0, 0.1);
+  filter: drop-shadow(-5.79137px 5.79137px 10px rgba(0, 0, 0, 0.15));
+  height: 82px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 11.5827px;
+  overflow: hidden;
+}
+
+@media (min-width: 1400px) {
+  .user-dashboard-card ::ng-deep .p-card {
+    font-size: clamp(12px, 3vw, 16px);
+    font-weight: 700;
+    height: 110px;
+  }
+}
+
+.user-dashboard-card ::ng-deep .p-card::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  content: "";
+}
+
+.user-dashboard-cards
+  .user-dashboard-card:nth-child(1)
+  ::ng-deep
+  .p-card:after {
+  background: #7fbb00;
+}
+.user-dashboard-cards
+  .user-dashboard-card:nth-child(2)
+  ::ng-deep
+  .p-card:after {
+  background: #fe2e2b;
+}
+.user-dashboard-cards
+  .user-dashboard-card:nth-child(3)
+  ::ng-deep
+  .p-card:after {
+  background: #00c1f1;
+}
+.user-dashboard-cards
+  .user-dashboard-card:nth-child(4)
+  ::ng-deep
+  .p-card:after {
+  background: #002efe;
+}
+.user-dashboard-cards
+  .user-dashboard-card:nth-child(5)
+  ::ng-deep
+  .p-card:after {
+  background: #81ae21;
+}
+.user-dashboard-cards
+  .user-dashboard-card:nth-child(6)
+  ::ng-deep
+  .p-card:after {
+  background: #b53533;
+}
+.user-dashboard-cards
+  .user-dashboard-card:nth-child(7)
+  ::ng-deep
+  .p-card:after {
+  background: #20399b;
+}
+.user-dashboard-cards
+  .user-dashboard-card:nth-child(8)
+  ::ng-deep
+  .p-card:after {
+  background: #2ba0bd;
+}
+
+.user-dashboard-card ::ng-deep .p-card .p-card-body {
+  padding: 0px;
+  flex-grow: 2;
+}
+
+.user-dashboard-card ::ng-deep .p-card .p-card-content {
+  padding: 0px;
+}
+
+.user-dashboard-card ::ng-deep .p-card .p-card-title {
+  font-family: "Inter";
+  font-size: clamp(10px, 3vw, 12px);
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
+@media (min-width: 1400px) {
+  .user-dashboard-card ::ng-deep .p-card .p-card-title {
+    font-size: clamp(12px, 3vw, 16px);
+    font-weight: 700;
+  }
+}
+
+.user-dashboard-card ::ng-deep .p-card .p-card-content .cardpara {
+  margin-bottom: 0px;
+}
+
+.user-dashboard-card ::ng-deep .p-card .p-card-header {
+  padding: 0 0.6rem 0rem 1.7rem;
+}
+
+.user-dashboard-card ::ng-deep .p-card .p-card-header .card-image {
+  height: 25px;
+}
+
+@media (min-width: 1400px) {
+  .user-dashboard-card ::ng-deep .p-card .p-card-header .card-image {
+    height: 40px;
+  }
+}
+
+.user-dashboard-cards
+  .user-dashboard-card:nth-child(6)
+  ::ng-deep
+  .p-card
+  .p-card-header
+  .card-image {
+  height: 20px;
+}
+
+@media (min-width: 1400px) {
+  .user-dashboard-cards
+    .user-dashboard-card:nth-child(6)
+    ::ng-deep
+    .p-card
+    .p-card-header
+    .card-image {
+    height: 34px;
+  }
+}
+
+/* card style end  */
+
+.user-dashboard-chart {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  gap: 2rem;
+  padding-top: 3.5rem;
+}
+
+@media (max-width: 768px) {
+  .user-dashboard-chart {
+    grid-template-columns: 1fr;
+    align-self: stretch;
+  }
+}
+
+/* chart style starts  */
+
+.first-chart,
+.second-chart {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background: #fafafa;
+  box-shadow: -5.79137px 5.79137px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+@media (min-width: 1400px) {
+  .first-chart ::ng-deep p-chart canvas,
+  .second-chart ::ng-deep p-chart canvas {
+    display: block;
+    width: 450px;
+  }
+}
+
+@media (max-width: 960px) {
+  .first-chart ::ng-deep p-chart canvas,
+  .second-chart ::ng-deep p-chart canvas {
+    display: block;
+    max-width: 240px;
+  }
+}
+
+/* chart style end  */

@@ -1,0 +1,186 @@
+<p-table
+  #dt1
+  [value]="value"
+  [columns]="columns"
+  [paginator]="paginator"
+  [rows]="rows"
+  [selectionMode]="selectionMode"
+  dataKey="_id"
+  responsiveLayout="scroll"
+  styleClass="p-datatable-gridlines"
+  currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+  [globalFilterFields]="this.searchFields"
+>
+  <ng-template pTemplate="caption" *ngIf="showCaption">
+    <div class="flex">
+      <!-- <button
+        pButton
+        label="Clear"
+        class="p-button-outlined"
+        icon="pi pi-filter-slash"
+        (click)="clear(dt1); clearFilter()"
+      ></button
+      ><button
+        pButton
+        label="Excel"
+        class="p-button-outlined ml-3"
+        icon="pi pi-file-excel"
+        (click)="exportExcel()"
+      ></button> -->
+      <span class="p-input-icon-left ml-auto dropdown-container">
+        <ng-container *ngFor="let input of filters">
+          <app-drop-down
+            *ngIf="input.type == 'dropdown'"
+            [inputInfo]="input"
+            [data]="input.option"
+            (updateData)="updateData($event, input.modelName)"
+            [scrollHeight]="input.option.lenght > 3 ? '140px' : '150px'"
+          >
+          </app-drop-down>
+          <app-calender
+            *ngIf="input.type == 'calender'"
+            [inputInfo]="input"
+            (updateData)="updateData($event, input.modelName)"
+          >
+          </app-calender>
+        </ng-container>
+
+        <span class="p-input-icon-left ml-auto">
+          <i class="pi pi-search"></i>
+          <input
+            pInputText
+            type="text"
+            (input)="searchPrint($event)"
+            placeholder="Search Table"
+          />
+        </span>
+      </span>
+    </div>
+  </ng-template>
+
+  <ng-template pTemplate="header">
+    <tr>
+      <th *ngFor="let column of columns">
+        <div class="p-d-flex p-jc-between p-ai-center text-center">
+          {{ column.header }}
+        </div>
+      </th>
+      <th *ngIf="action">Actions</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData let-rowIndex="rowIndex">
+    <tr (click)="onRowClick(rowData)" class="tableRow">
+      <ng-container *ngFor="let column of columns">
+        <td [attr.data-type]="column.type">
+          <div
+            class="row justify-content-center"
+            *ngIf="column.type === 'text'"
+          >
+            <div
+              [ngClass]="{
+                'high-priority':
+                  column.field === 'projectPriority' &&
+                  rowData[column.field] === 'High',
+                'low-priority':
+                  column.field === 'projectPriority' &&
+                  rowData[column.field] === 'Low',
+                'medium-priority':
+                  column.field === 'projectPriority' &&
+                  rowData[column.field] === 'Medium',
+                'complete-status':
+                  column.field === 'status' &&
+                  rowData[column.field] === 'Completed',
+                'toDo-status':
+                  column.field === 'status' &&
+                  rowData[column.field] === 'To-Do',
+                'inProgress-status':
+                  column.field === 'status' &&
+                  rowData[column.field] === 'In-Progress',
+                'assign-status':
+                  column.field === 'status' &&
+                  rowData[column.field] === 'Assigned'
+              }"
+            >
+              <ng-container *ngIf="column.field === 'assignedBy'">
+                <img
+                  class="assignImage"
+                  [src]="rowData.image"
+                  alt="rowData.image"
+                />
+              </ng-container>
+              {{ rowData[column.field] }}
+            </div>
+          </div>
+          <div class="text-center" *ngIf="column.type === 'date'">
+            {{ rowData[column.field] | date : "dd/MM/yyyy h:mm a" }}
+          </div>
+          <div class="text-center" *ngIf="column.type === 'currency'">
+            {{ rowData[column.field] | currency : "PKR " }}
+          </div>
+          <div class="text-center" *ngIf="column.type === 'number'">
+            {{ rowData[column.field] }}
+          </div>
+          <div class="text-center" *ngIf="column.type === 'boolean'">
+            {{ rowData[column.field] ? "Yes" : "No" }}
+          </div>
+
+          <input
+            *ngIf="column.type === 'checkbox'"
+            type="checkbox"
+            [checked]="rowData[column.field]"
+            disabled
+          />
+          <img
+            *ngIf="column.type === 'image'"
+            [src]="rowData[column.field]"
+            height="50"
+          />
+        </td>
+      </ng-container>
+      <td *ngIf="action">
+        <div class="btn-group">
+          <button
+            *ngFor="let action of rowActions"
+            type="button"
+            class="btn"
+            [ngClass]="action.class"
+            (click)="executeFunction(action.functionName, rowData, action)"
+          >
+            <i [ngClass]="action.icon"></i>
+            {{ action.name }}
+          </button>
+        </div>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+<app-paginator
+  [limit]="10"
+  [totalRecords]="totalrecord"
+  (paginatorValuesChange)="updatePaginatorValues($event)"
+>
+</app-paginator>
+
+<p-dialog
+  header="Confirmation"
+  [(visible)]="deleteConfirmationVisible"
+  modal="true"
+  [responsive]="true"
+>
+  <p>{{ deleteConfirmationMessage }}</p>
+  <div class="p-dialog-footer">
+    <button
+      pButton
+      type="button"
+      label="Yes"
+      class="p-button-danger"
+      (click)="deleteConfirmed()"
+    ></button>
+    <button
+      pButton
+      type="button"
+      label="No"
+      (click)="deleteConfirmationVisible = false"
+    ></button>
+  </div>
+</p-dialog>

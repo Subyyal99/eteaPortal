@@ -1,0 +1,19 @@
+<div class="" *ngIf="this.inputInfo.type == 'mask'">
+  <div class="row">
+    <p-inputMask
+      class="col-12 inputMask"
+      type="{{ this.inputInfo.inputType }}"
+      [mask]="inputInfo.mask"
+      [formControl]="this.formControl"
+      placeholder=" {{ this.inputInfo.placeHolder }}"
+      (keyup.enter)="onEnter()"
+      (onClick)="onClick()"
+    >
+    </p-inputMask>
+  </div>
+  <div class="errorDiv">
+    <small id="username2-help" class="p-error" *ngIf="this.formControl.dirty">{{
+      getError()
+    }}</small>
+  </div>
+</div>

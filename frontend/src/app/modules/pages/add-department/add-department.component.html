@@ -1,0 +1,22 @@
+<div class="add-department">
+  <div class="add-department-heading">
+    <h2>Add Department</h2>
+  </div>
+  <section class="form-section">
+    <div class="form-section-area">
+      <div class="form-one">
+        <app-dynamic-form
+          [inputInfo]="addDepartmentInputInfo"
+          (formData)="addDepartment($event)"
+        ></app-dynamic-form>
+      </div>
+      <div class="form-two">
+        <app-dynamic-form
+          [inputInfo]="assignEmployeinputInfo"
+          (searchFor)="updateSearch($event)"
+          (formData)="assignedEmployee($event)"
+        ></app-dynamic-form>
+      </div>
+    </div>
+  </section>
+</div>

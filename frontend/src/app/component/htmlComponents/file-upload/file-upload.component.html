@@ -1,0 +1,28 @@
+<div
+  class="file-uploader"
+  #fileUpload
+  [ngClass]="!hasFilesFlag ? 'hasFiles' : ''"
+>
+  <p-fileUpload
+    [mode]="inputInfo.selectionMode"
+    [multiple]="inputInfo.multipleUpload"
+    [chooseLabel]="inputInfo.uploadLabel"
+    [name]="inputInfo.requestName"
+    [accept]="inputInfo.uploadAccept"
+    [customUpload]="inputInfo.customUpload"
+    [maxFileSize]="inputInfo.maxFileSize"
+    [chooseIcon]="inputInfo.icon"
+    (onSelect)="handleOnSelect($event)"
+    (onUpload)="handleOnClear($event)"
+    (onClear)="handleOnClear($event)"
+    (onRemove)="handleOnRemove($event)"
+  >
+    <ng-template pTemplate="content" let-file> </ng-template>
+  </p-fileUpload>
+  <small
+    id="username2-help"
+    class="p-error"
+    *ngIf="inputInfo.showError && this.uploadedFiles.length == 0"
+    >{{ getError() }}</small
+  >
+</div>

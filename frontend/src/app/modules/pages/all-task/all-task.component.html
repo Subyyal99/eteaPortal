@@ -1,0 +1,28 @@
+<div class="all-task">
+    <div class="all-task-heading">
+        <h2>
+            All Tasks
+        </h2>
+    </div>
+    <section class="table-section">
+        <div class="table-section-area">
+            <div class="all-task-table">
+                <app-table
+                [value]="tableinfo"
+                [columns]="myColumns"
+                [paginator]="false"
+                [rows]="this.limit"
+                [showCaption]="true"
+                [action]="false"
+                [filters]="inputInfo"
+                [totalrecord]="totalRecords"
+                selectionMode="single"
+                (rowClick)="onRowClick($event)"
+                (searchText)="getSearchText($event)"
+                (selectedValueChange)="updateFilterData($event)"
+                (updatePaginator)="paginatorValues($event)"
+            ></app-table>
+            </div>
+        </div>
+    </section>
+</div>

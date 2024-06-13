@@ -1,0 +1,14 @@
+<div class="user-task">
+  <div class="user-task-heading">
+    <h2>Create Employee</h2>
+  </div>
+  <section class="form-section">
+    <div class="form-section-area">
+      <app-dynamic-form
+        [inputInfo]="inputInfo"
+        (searchFor)="updateSearch($event)"
+        (formData)="onSubmit($event)"
+      ></app-dynamic-form>
+    </div>
+  </section>
+</div>

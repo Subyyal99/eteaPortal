@@ -1,0 +1,28 @@
+.side-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.side-panel-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0rem;
+}
+.side-panel-logo img {
+  width: 80px;
+  height: 80px;
+}
+
+.user-logout {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: auto;
+  column-gap: 1.7rem;
+  padding: 1rem;
+}
+
+.user-logout i {
+  font-size: 22px;
+}

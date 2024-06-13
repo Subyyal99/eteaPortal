@@ -1,0 +1,37 @@
+<div class="all-departments">
+  <div class="ad-title">
+    <h4>All Departments</h4>
+  </div>
+  <app-confirm-popup></app-confirm-popup>
+  <div class="ad-main">
+    <div class="ad-main-cards">
+      <div class="ad-mc-add-department">
+        <app-card
+          [type]="'addDepartment'"
+          [cardHeader]="'Add New Department'"
+          [cardSubHeader]="
+            'It is a long established fact that a reader wil be distracted by the readable content.'
+          "
+          (cardButton)="onCardButtonClick($event)"
+        ></app-card>
+      </div>
+      <ng-container *ngFor="let department of departmentsData">
+        <div class="ad-mc-all-departments">
+          <app-card
+            [type]="'showDepartment'"
+            [cardHeader]="department.name"
+            [cardPara]="department.employeeStats"
+            [buttons]="false"
+            [cardBackground]="department.background"
+            [cardFooterFlag]="true"
+            [buttons]="true"
+            [avatarImages]="department.employees"
+            [cardId]="department.id"
+            [avatarsToShow]="0"
+            (cardButton)="onCardButtonClick($event)"
+          ></app-card>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

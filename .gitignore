@@ -1,0 +1,7 @@
+*node_modules*
+*.zip
+*-lock.json
+*.env
+*dist*
+*uploads/*
+*.angular

@@ -1,0 +1,165 @@
+<div class="view-task-title">
+  <h4>Task</h4>
+</div>
+<div class="view-task">
+  <div class="project-details">
+    <div class="pd-main">
+      <div class="pd-details">
+        <h2>{{ taskInfo.title }}</h2>
+      </div>
+      <div class="pd-description">
+        <div class="pd-description-title">
+          <h4>Description</h4>
+        </div>
+        <div class="pd-description-details">
+          <p>
+            {{ taskInfo.description }}
+          </p>
+        </div>
+      </div>
+      <div class="pd-attachments">
+        <div class="pd-attachments-title">
+          <h4>
+            Attachments ({{
+              taskInfo.attachment.length > 0 ? taskInfo.attachment.length : 0
+            }})
+          </h4>
+        </div>
+        <div class="pd-attachments-items">
+          <div class="pd-ai-card">
+            <ng-container *ngFor="let card of taskInfo.attachment">
+              <app-card
+                [cardHeader]="
+                  card.fileName.length > 14
+                    ? (card.fileName | slice : 0 : 14) + '...'
+                    : card.fileName
+                "
+                [cardImage]="card.imageUrl"
+                [cardPara]="card.uploadDate | date : 'dd MMM yyyy, hh:mm a'"
+                [buttons]="false"
+              ></app-card>
+            </ng-container>
+          </div>
+          <div class="pd-ai-uploader"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="project-status">
+    <div class="ps-status">
+      <div class="ps-status-title">
+        <h4>Status</h4>
+      </div>
+      <div class="ps-status-button" *ngIf="inputInfo.length > 0">
+        <app-dynamic-form
+          [inputInfo]="[inputInfo[0]]"
+          (formData)="onSubmit($event)"
+        ></app-dynamic-form>
+      </div>
+    </div>
+    <div class="ps-details">
+      <div class="ps-details-title">
+        <h4>Details</h4>
+      </div>
+      <div class="ps-details-items">
+        <div class="ps-di-row">
+          <h4>Assigned By</h4>
+          <h4>{{ taskInfo.assignedBy }}</h4>
+        </div>
+        <div class="ps-di-row">
+          <h4>Assigned To</h4>
+          <h4>{{ taskInfo.assignedTo }}</h4>
+        </div>
+        <div class="ps-di-row">
+          <h4>Assigned Date</h4>
+          <h4>{{ taskInfo.assignedDate | date : "shortDate" }}</h4>
+        </div>
+        <div class="ps-di-row">
+          <h4>Due Date</h4>
+          <h4>{{ taskInfo.dueDate | date : "shortDate" }}</h4>
+        </div>
+        <div class="ps-di-row">
+          <h4>Priority</h4>
+          <h4
+            [style.color]="
+              taskInfo.priority == 'High'
+                ? 'red'
+                : taskInfo.priority == 'Medium'
+                ? 'orange'
+                : taskInfo.priority == 'Low'
+                ? 'green'
+                : ''
+            "
+          >
+            {{ taskInfo.priority }}
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-activity">
+    <div class="pa-title">
+      <h4>Activity</h4>
+    </div>
+    <div class="pa-main">
+      <div class="pa-comments">
+        <div class="pa-comments-title">
+          <p>Comments</p>
+        </div>
+        <div class="pa-comments-main">
+          <div class="pa-cm-add-comment">
+            <app-comment
+              [inputInfo]="commentInfo"
+              [submitLabel]="'Send'"
+              (formData)="onCommentSubmit($event)"
+            ></app-comment>
+          </div>
+          <div class="pa-cm-comments">
+            <ng-container *ngFor="let comment of comments">
+              <div class="pa-cm-comments-items">
+                <div class="pa-cm-ci-firstRow">
+                  <div class="pa-cm-ci-firstRow-name">
+                    <p>{{ comment.commentedBy }}</p>
+                  </div>
+                  <div class="pa-cm-ci-firstRow-time">
+                    <p>{{ comment.commentTime }}</p>
+                  </div>
+                </div>
+                <div class="pa-cm-ci-secondRow">
+                  <div class="pa-cm-ci-secondRow-comment">
+                    <p>{{ comment.comment }}</p>
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+      <div class="pa-work-logs">
+        <div class="pa-work-logs-title">
+          <p>Work log</p>
+        </div>
+        <div class="pa-wl-changes">
+          <ng-container *ngFor="let workLog of workLogs">
+            <div class="pa-wl-changes-item">
+              <div class="pa-wl-ci-firstRow">
+                <div class="pa-wl-ci-firstRow-name">
+                  <p>{{ workLog.changeBy }}</p>
+                </div>
+                <div class="pa-wl-ci-firstRow-time">
+                  <p>{{ workLog.changeTime }}</p>
+                </div>
+              </div>
+              <div class="pa-wl-ci-secondRow">
+                <div class="pa-wl-ci-secondRow-change">
+                  <p>{{ workLog.change }}</p>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

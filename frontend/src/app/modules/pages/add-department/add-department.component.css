@@ -1,0 +1,165 @@
+.add-department {
+  background: #f8f8f8;
+}
+.add-department-heading h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  text-transform: capitalize;
+  color: #000000;
+  margin-left: 20px;
+  padding-top: 17px;
+}
+.form-section {
+  display: flex;
+  padding-left: 74px;
+  padding-right: 102px;
+  padding-bottom: 88px;
+  padding-top: 49px;
+}
+.form-section-area {
+  background: #ffffff;
+  box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  padding-left: 66px;
+  flex-grow: 2;
+}
+.form-one::ng-deep label.label.pt-2.lable-font {
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(20px, 3vw, 26px);
+  line-height: 32px;
+  color: #000000;
+}
+.form-one {
+  padding-top: 27px;
+}
+.form-one::ng-deep
+  input.p-inputtext.p-component.p-element.p-inputtext-md.col-md-12 {
+  max-width: 600px;
+  background: #fafafa;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  border: none;
+  height: 45px;
+}
+.form-one::ng-deep .mt-2.ng-star-inserted {
+  padding-bottom: 35px;
+  padding-right: 20px;
+}
+.form-one::ng-deep span.required.ng-star-inserted {
+  color: red;
+}
+/* For Big Button */
+.form-section-area::ng-deep button.btn.btn-primary {
+  width: 202.28px;
+  height: 43.08px;
+  margin-bottom: 2rem;
+}
+/* For Second DropDown  */
+.form-two::ng-deep .p-dropdown.p-component.p-dropdown {
+  max-width: 600px;
+  background: #fafafa;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  border: none;
+  height: 45px;
+}
+.form-two::ng-deep .p-scroller.ng-star-inserted {
+  background: #f8f8f8;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+.form-two::ng-deep
+  .p-dropdown-panel
+  .p-dropdown-items
+  .p-dropdown-item:not(.p-highlight):not(.p-disabled):hover {
+  color: #ffffff;
+  background: #0078d4;
+}
+.form-two {
+  padding-top: 50px;
+}
+.form-two::ng-deep span.required.ng-star-inserted {
+  color: red;
+}
+.form-two::ng-deep label.label.pt-2.lable-font {
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(20px, 3vw, 26px);
+  line-height: 32px;
+  color: #000000;
+}
+.form-two::ng-deep .p-multiselect.p-component.p-multiselect-chip {
+  max-width: 339px;
+  background: #fafafa;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  border: none;
+  height: 45px;
+}
+.form-two::ng-deep .p-multiselect-panel.p-component.ng-star-inserted {
+  background: #fafafa;
+}
+.form-two::ng-deep .p-multiselect-header.ng-star-inserted {
+  background: #fff;
+}
+.form-two::ng-deep .p-inputtext.p-component {
+  background: #fafafa;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  border: none;
+  height: 45px;
+}
+.form-two::ng-deep
+  .p-multiselect-panel
+  .p-multiselect-items
+  .p-multiselect-item:not(.p-highlight):not(.p-disabled):hover {
+  color: #ffffff;
+  background: #0078d4;
+}
+.form-two::ng-deep .row.justify-content-center.mt-2 {
+  padding-bottom: 26px;
+  padding-right: 20px;
+}
+/* for third field multi search dropdown  */
+.form-three {
+  padding-top: 50px;
+}
+.form-three::ng-deep span.required.ng-star-inserted {
+  color: red;
+}
+.form-three::ng-deep label.label.pt-2.lable-font {
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(20px, 3vw, 26px);
+  line-height: 32px;
+  color: #000000;
+}
+.form-three::ng-deep .p-multiselect.p-component.p-multiselect-chip {
+  max-width: 339px;
+}
+.form-three::ng-deep .row.justify-content-center.mt-2 {
+  padding-bottom: 26px;
+  padding-right: 20px;
+}
+.form-two::ng-deep .p-checkbox .p-checkbox-box {
+  /* background-color: #fafafa;
+  border-color: cornflowerblue; */
+}
+@media only screen and (max-width: 660px) {
+  .form-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .form-two::ng-deep .p-multiselect.p-component.p-multiselect-chip {
+    max-width: 207px;
+  }
+  .form-section-area::ng-deep button.btn.btn-primary {
+    width: 100px;
+  }
+  .form-section-area {
+    padding-left: 22px;
+  }
+}

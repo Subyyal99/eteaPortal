@@ -1,0 +1,3 @@
+::ng-deep .p-editor-container .ql-snow.ql-toolbar button.ql-image {
+    display: none;
+}

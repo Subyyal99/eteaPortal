@@ -1,0 +1,102 @@
+<div class="performance">
+    <div class="performance-heading">
+        <h2>
+            Welcome,{{performancepageinfo.title}}
+        </h2>
+        <p class="performance-date">
+            {{this.datee | date: 'EE, d MMMM y'}}
+        </p>
+    </div>
+    <div class="sections">
+        <section class="card-section">
+            <app-card
+            [type]="'profileDetailCard'"
+            [cardImage]="performancepageinfo.image"
+            [cardHeader]="performancepageinfo.employName"
+            [cardSubHeader]="performancepageinfo.employDesignation"
+            [cardPara]="performancepageinfo.department"
+            [cardEmail]="performancepageinfo.email"
+            [cardNumber]="performancepageinfo.cardNumber"
+            [cardLocation]="performancepageinfo.cardLocation"
+            >
+            </app-card>
+        </section>
+        <section class="task-section">
+            <div class="task-heading">
+                <h2>
+                    Tasks
+                </h2>
+            </div>
+            <div class="flex">
+            <div class="container task">
+            <div class="task-data" *ngFor="let item of iconData">
+                <div class="icons">
+                <img [src]="item.icon" alt="Icon">
+                </div>
+                <!-- <i [class]="item.icon"></i> -->
+                <div class="data">{{ item.data }}</div>
+                <div class="number">{{ item.number }}</div>
+              </div>
+            </div>
+            <div class="container task">
+                <div class="task-data" *ngFor="let item of iconsData">
+                    <div class="icons">
+                    <img [src]="item.icon" alt="Icon">
+                    </div>
+                    <!-- <i [class]="item.icon"></i> -->
+                    <div class="data">{{ item.data }}</div>
+                    <div class="number">{{ item.number }}</div>
+                  </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="Graphs" *ngFor="let item of taskData">
+        <div class="firstChart">
+          <div class="firstChart-heading">
+            <h2>
+              {{item.heading}}
+            </h2>
+          </div>
+          <app-charts
+            [type]="'bar'"
+            [chartOptions]="multiAxisOptions"
+            [chartData]="item.chartData"
+            width="960px"
+            height="260px"
+          ></app-charts>
+        </div>
+        <div class="firstProgress">
+          <div class="firstProgress-heading">
+            <h2>
+              Progress
+            </h2>
+            <div class="border">
+              <div class="knob">
+                <app-knob
+                  [value]="item.progressData.knobValue"
+                  [Percent]="'{value}%'"
+                  [color]="item.progressData.knobColor"
+                  [readonly]="item.progressData.readonly"
+                ></app-knob>
+              </div>
+              <h5 class="update">
+                {{item.progressData.task}}
+              </h5>
+              <p class="task">
+                Task{{ item.progressData.taskNumber }}
+              </p>
+              <div class="assigned">
+                <img class="employImg" src="{{ item.progressData.employeImg }}" alt="img">
+                <p class="assign-task">
+                  {{ item.progressData.assignTo }}
+                </p>
+                <p class="assign-day">
+                  {{ item.progressData.assignDay }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>

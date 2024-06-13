@@ -1,0 +1,11 @@
+# database credentials
+USER_NAME = "root"
+PASSWORD = ""
+DATA_BASE = "template"
+HOST = "127.0.0.1"
+PORT = "3306"
+# application links 
+URL= "http://localhost:8000/"
+ANGULARURL= "http://localhost:4200"
+# token encryption key secret
+SECRET= "mubi-msi-acp-best-secret",

@@ -1,0 +1,12 @@
+/* fileuploader css starts */
+
+/* hidding upload and cancel button from toolbar in advanced uploader */
+.comment
+  ::ng-deep
+  .file-uploader
+  p-fileUpload
+  .p-fileupload-buttonbar
+  p-button.p-element {
+  display: none;
+}
+/* fileuploader css end */

@@ -1,0 +1,145 @@
+<div class="form-group" *ngFor="let input of inputInfo">
+  <ng-container [ngSwitch]="input.type">
+    <label class="label pt-2 lable-font"
+      >{{ input.label | capitalization }}
+      <span class="required" *ngIf="input.required">*</span>
+    </label>
+    <app-text-box
+      *ngSwitchCase="'text2'"
+      [inputInfo]="input"
+      [changeFlag]="this.changeFlag"
+      [customValidator]="input.customValidator"
+      (updateData)="updateData($event, input.modelName)"
+      (preSubmit)="preSubmit()"
+      (submit)="onSubmit()"
+    >
+    </app-text-box>
+    <!-- <app-mask-input
+      *ngSwitchCase="'mask'"
+      [inputInfo]="input"
+      [mask]="input.mask"
+      [changeFlag]="this.changeFlag"
+      (updateData)="updateData($event, input.modelName)"
+      (preSubmit)="preSubmit()"
+      (submit)="onSubmit()"
+    ></app-mask-input> -->
+    <app-text-area
+      *ngSwitchCase="'textArea'"
+      [inputInfo]="input"
+      [changeFlag]="this.changeFlag"
+      (updateData)="updateData($event, input.modelName)"
+      (preSubmit)="preSubmit()"
+      (submit)="onSubmit()"
+    >
+    </app-text-area>
+
+    <app-check-box
+      *ngSwitchCase="'checkbox'"
+      [inputInfo]="input"
+      [changeFlag]="this.changeFlag"
+      (updateData)="updateData($event, input.modelName)"
+      (preSubmit)="preSubmit()"
+      (submit)="onSubmit()"
+    >
+    </app-check-box>
+
+    <app-drop-down
+      *ngSwitchCase="'dropdown'"
+      [inputInfo]="input"
+      [changeFlag]="this.changeFlag"
+      [data]="input.data"
+      (updateData)="updateData($event, input.modelName)"
+      (searchFor)="search($event)"
+      (preSubmit)="preSubmit()"
+      (submit)="onSubmit()"
+      [scrollHeight]="input.data.lenght > 3 ? '140px' : '150px'"
+    >
+    </app-drop-down>
+
+    <app-radio-button
+      *ngSwitchCase="'radioButton'"
+      [inputInfo]="input"
+      [changeFlag]="this.changeFlag"
+      (updateData)="updateData($event, input.modelName)"
+      (preSubmit)="preSubmit()"
+      (submit)="onSubmit()"
+    >
+    </app-radio-button>
+
+    <app-mask-input
+      *ngSwitchCase="'mask'"
+      [inputInfo]="input"
+      [changeFlag]="this.changeFlag"
+      (updateData)="updateData($event, input.modelName)"
+      (preSubmit)="preSubmit()"
+      (submit)="onSubmit()"
+    >
+    </app-mask-input>
+
+    <app-input-switch
+      *ngSwitchCase="'switch'"
+      [inputInfo]="input"
+      [changeFlag]="this.changeFlag"
+      (updateData)="updateData($event, input.modelName)"
+      (preSubmit)="preSubmit()"
+      (submit)="onSubmit()"
+    >
+    </app-input-switch>
+
+    <app-file-upload
+      *ngSwitchCase="'uploader'"
+      [inputInfo]="input"
+      [changeFlag]="this.changeFlag"
+      (submit)="onSubmit()"
+      (dataReady)="updateData($event, input.modelName)"
+      [minWidth]="'150px'"
+      [clear]="this.dynamicClear"
+    ></app-file-upload>
+
+    <app-multi-select
+      *ngSwitchCase="'multi'"
+      [inputInfo]="input"
+      [data]="input.option"
+      [changeFlag]="this.changeFlag"
+      (updateData)="updateData($event, input.modelName)"
+      (searchFor)="search($event)"
+      (preSubmit)="preSubmit()"
+      (submit)="onSubmit()"
+    >
+    </app-multi-select>
+
+    <app-calender
+      *ngSwitchCase="'calendar'"
+      [inputInfo]="input"
+      [minDate]="input.minDate"
+      [maxDate]="input.maxDate"
+      [inLine]="input.inline"
+      [dateFormat]="input.dateFormat"
+      [selectionMode]="input.selectionMode"
+      [changeFlag]="this.changeFlag"
+      (updateData)="updateData($event, input.modelName)"
+      (preSubmit)="preSubmit()"
+      (submit)="onSubmit()"
+    >
+    </app-calender>
+
+    <app-editor
+      *ngSwitchCase="'editor'"
+      [inputInfo]="input"
+      [changeFlag]="this.changeFlag"
+      (updateData)="updateData($event, input.modelName)"
+      (preSubmit)="preSubmit()"
+      (submit)="onSubmit()"
+    >
+    </app-editor>
+
+    <!-- <app-select-button
+      (button)="updateData($event, 'select')"
+      [options]="[1,2,3]"
+    >
+    </app-select-button> -->
+  </ng-container>
+</div>
+<button (click)="preSubmit()" type="submit" class="btn btn-primary">
+  Submit
+</button>

@@ -1,0 +1,171 @@
+.user-navigation {
+  display: flex;
+}
+
+.user-main {
+  width: 100%;
+  background-color: var(--main-bg-color);
+}
+
+.user-side-panel {
+  width: max-content;
+  min-height: 100vh;
+  background-color: var(--sidePanel-bg-color);
+}
+
+.user-side-panel ::ng-deep .p-component {
+  font-family: "Inter";
+}
+
+.user-side-panel ::ng-deep .side-panel app-panel-menu {
+  height: 100%;
+}
+
+.user-side-panel ::ng-deep .side-panel app-panel-menu .panel-menu {
+  height: 100%;
+}
+
+.user-side-panel ::ng-deep .side-panel app-panel-menu .panel-menu p-panelmenu {
+  display: flex;
+  height: 100%;
+}
+
+.user-side-panel
+  ::ng-deep
+  .side-panel
+  app-panel-menu
+  .panel-menu
+  p-panelmenu
+  .p-panelmenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-side-panel
+  ::ng-deep
+  .side-panel
+  app-panel-menu
+  .panel-menu
+  p-panelmenu
+  .p-panelmenu
+  .p-panelmenu-panel:last-child {
+  margin-top: auto;
+  margin-bottom: 1rem;
+}
+
+.user-side-panel ::ng-deep .p-panelmenu {
+  padding-left: 0.8rem;
+}
+
+.user-side-panel ::ng-deep .p-panelmenu .p-panelmenu-panel {
+  box-shadow: none;
+}
+
+.user-side-panel ::ng-deep .p-panelmenu .p-panelmenu-header > a {
+  padding: 0.5rem 1rem 0.5rem 0.7rem;
+  justify-content: flex-start;
+  column-gap: 1rem;
+  background: none;
+  color: white;
+}
+
+.user-side-panel
+  ::ng-deep
+  .p-panelmenu
+  .p-panelmenu-header.p-highlight:not(.p-disabled)
+  > a:hover {
+  border-color: transparent;
+  background: none;
+  color: white;
+}
+
+.user-side-panel
+  ::ng-deep
+  .p-panelmenu
+  .p-panelmenu-panel:last-child
+  .p-panelmenu-header
+  > a {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.user-side-panel
+  ::ng-deep
+  .p-panelmenu
+  .p-panelmenu-header:not(.p-highlight):not(.p-disabled)
+  > a:hover,
+.user-side-panel
+  ::ng-deep
+  .p-panelmenu
+  .p-panelmenu-panel
+  .p-panelmenu-header
+  .p-panelmenu-header-link:focus {
+  border-color: transparent;
+  color: white;
+  background: linear-gradient(
+    90.05deg,
+    #5ea8ff 0.05%,
+    rgba(34, 125, 230, 0.2) 112.9%
+  );
+  border-radius: 20px 0px 0px 20px;
+}
+
+.user-side-panel
+  ::ng-deep
+  .p-panelmenu
+  .p-panelmenu-panel
+  .p-panelmenu-header
+  .p-menuitem-link-active {
+  border-color: transparent;
+  color: white;
+  background: linear-gradient(
+    90.05deg,
+    #5ea8ff 0.05%,
+    rgba(34, 125, 230, 0.2) 112.9%
+  );
+  font-weight: 700;
+  border-radius: 20px 0px 0px 20px;
+}
+
+/* Mobile view Sidebar */
+
+.user-side-panel
+  ::ng-deep
+  .mobileView
+  .p-panelmenu
+  .p-panelmenu-panel
+  .p-panelmenu-header-link
+  .p-menuitem-text {
+  display: none;
+}
+
+.user-side-panel ::ng-deep .mobileView .p-panelmenu {
+  padding-left: 0rem;
+  margin-top: 0rem;
+  width: 100%;
+}
+
+.user-side-panel ::ng-deep .mobileView .p-panelmenu .p-panelmenu-header > a {
+  padding: 1rem;
+  justify-content: center;
+}
+
+.user-side-panel
+  ::ng-deep
+  .mobileView
+  .p-panelmenu
+  .p-panelmenu-header
+  > a
+  .p-menuitem-icon {
+  margin-right: 0rem;
+}
+
+/* side panel logo css starting */
+
+.user-side-panel ::ng-deep .side-panel .side-panel-logo .side-panel-logo-img {
+  background: white;
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+/* side panel logo css ending */

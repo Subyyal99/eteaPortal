@@ -1,0 +1,12 @@
+<div class="chart">
+  <ng-container *ngIf="this.graphLabel">
+    <h5>{{ this.graphLabel }}</h5>
+  </ng-container>
+  <p-chart
+    [type]="type"
+    [data]="chartData"
+    [options]="chartOptions"
+    [width]="width"
+    [height]="height"
+  ></p-chart>
+</div>

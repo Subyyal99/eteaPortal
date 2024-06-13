@@ -1,0 +1,10 @@
+::ng-deep.p-calendar .p-datepicker {
+  min-width: 50% !important;
+  z-index: 1001 !important;
+  transform-origin: center bottom;
+  top: 50px !important;
+  left: 0px !important;
+}
+.errorDiv {
+  height: 20px;
+}

@@ -1,0 +1,23 @@
+<div class="user-navigation">
+  <div class="user-side-panel">
+    <app-side-panel
+      [desktopWidth]="'225px'"
+      [mobileWidth]="'60px'"
+      [mobileBreakpoint]="768"
+      [height]="'100vh'"
+      [color]="'white'"
+      [fontSize]="'clamp(14px, 3vw, 16px) !important'"
+      [fontWeight]="'400'"
+      [position]="'sticky'"
+      [top]="'0'"
+      [overflow]="'auto'"
+      [panelLogoImage]="'./assets/images/logo.png'"
+      [sidePanelData]="menuItems"
+      [isLoggedIn]="isLoggedIn"
+    ></app-side-panel>
+  </div>
+
+  <div class="user-main">
+    <router-outlet></router-outlet>
+  </div>
+</div>

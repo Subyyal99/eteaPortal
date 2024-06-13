@@ -1,0 +1,8 @@
+::ng-deep .p-confirm-popup:before,
+::ng-deep .p-confirm-popup:after {
+  left: calc(var(--overlayArrowLeft, 0) + 0.75rem) !important;
+}
+
+::ng-deep .p-confirm-popup {
+  margin-left: 10px;
+}

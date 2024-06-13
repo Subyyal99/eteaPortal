@@ -1,0 +1,35 @@
+<div class="user-dashboard">
+  <div class="user-dashboard-heading">
+    <h3>Welcome To User DashBoard</h3>
+  </div>
+  <div class="user-dashboard-cards">
+    <ng-container *ngFor="let card of cardData">
+      <div class="user-dashboard-card">
+        <app-card
+          [cardHeader]="card.count"
+          [cardImage]="card.image"
+          [cardPara]="card.title"
+          [buttons]="false"
+          [cardBackground]="card.background"
+        ></app-card>
+      </div>
+    </ng-container>
+  </div>
+
+  <div class="user-dashboard-chart">
+    <div class="first-chart">
+      <app-charts
+        [type]="'doughnut'"
+        [chartData]="firstChartData"
+        [chartOptions]="firstCharOptions"
+      ></app-charts>
+    </div>
+    <div class="second-chart">
+      <app-charts
+        [type]="'doughnut'"
+        [chartData]="secondChartData"
+        [chartOptions]="secondChartOptions"
+      ></app-charts>
+    </div>
+  </div>
+</div>

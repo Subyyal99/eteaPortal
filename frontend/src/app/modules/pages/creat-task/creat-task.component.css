@@ -1,0 +1,560 @@
+.create-task {
+  background: #f8f8f8;
+}
+.create-task-heading h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  text-transform: capitalize;
+  color: #000000;
+  margin-left: 20px;
+  padding-top: 17px;
+}
+.form-section {
+  padding-left: 74px;
+  padding-right: 102px;
+  /* padding-bottom: 20px; */
+  padding-top: 49px;
+}
+.form-section-area {
+  background: #ffffff;
+  box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  padding-left: 95px;
+  padding-right: 147px;
+  padding-top: 66px;
+  padding-bottom: 80px;
+}
+.create-task app-dynamic-form {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 2rem;
+  column-gap: 6.4rem;
+  justify-content: flex-start;
+  align-items: end;
+}
+.form-section-area::ng-deep label.label.pt-2.lable-font {
+  font-style: normal;
+  font-weight: 500;
+  font-size: clamp(16px, 3vw, 20px);
+  line-height: 24px;
+  padding-bottom: 7px;
+}
+.form-section-area::ng-deep .p-multiselect.p-component.p-multiselect-chip {
+  background: #fafafa;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  border: none;
+  width: 500px;
+  height: 45px;
+}
+.form-section-area::ng-deep .p-multiselect-items-wrapper {
+  background-color: #f8f8f8;
+}
+.form-section-area::ng-deep .p-multiselect-header.ng-star-inserted {
+  background-color: #fff;
+}
+.form-section-area::ng-deep .p-checkbox .p-checkbox-box {
+  /* background-color: #fafafa;
+  border-color: cornflowerblue; */
+}
+.form-section-area::ng-deep
+  .p-multiselect-panel
+  .p-multiselect-items
+  .p-multiselect-item:not(.p-highlight):not(.p-disabled):hover {
+  color: #ffffff;
+  background: #0078d4;
+}
+.form-section-area::ng-deep .p-dropdown.p-component.p-dropdown {
+  background: #fafafa;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  border: none;
+  width: 500px;
+  height: 45px;
+}
+.form-section-area::ng-deep
+  .p-dropdown-panel
+  .p-dropdown-items
+  .p-dropdown-item:not(.p-highlight):not(.p-disabled):hover {
+  color: #ffffff;
+  background: #0078d4;
+}
+.form-section-area::ng-deep .p-scroller.ng-star-inserted {
+  background: #fafafa;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+.form-section-area::ng-deep .p-inputtext.p-component {
+  background: #fafafa;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  border: none;
+  max-width: 500px;
+  height: 45px;
+}
+.form-section-area::ng-deep .p-calendar {
+  width: 500px;
+}
+.form-section-area::ng-deep .p-inputtext.p-component {
+  background: #fafafa;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  border: none;
+  height: 45px;
+}
+.form-section-area::ng-deep
+  input.p-inputtext.p-component.p-element.p-inputtext-md.col-md-12 {
+  background: #fafafa;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  border: none;
+  width: 500px;
+  height: 45px;
+}
+.form-section-area::ng-deep
+  textarea.p-inputtextarea.p-inputtext.p-component.p-element.col-md-12 {
+  width: 500px;
+  height: 100px !important;
+  background: #fafafa;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  border: none;
+}
+.form-section-area::ng-deep
+  span.p-ripple.p-element.p-button.p-component.p-fileupload-choose.p-button-icon-only {
+  border: 1px dashed #000000;
+  filter: drop-shadow(-5px 5px 25px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  width: 500px;
+  height: 100px;
+}
+.form-section-area::ng-deep
+  span.p-button-icon.p-button-icon-left.pi.pi-cloud-upload {
+  color: black;
+  margin-left: 45%;
+  font-size: 30px;
+  font-weight: 700;
+}
+.form-section-area::ng-deep span.p-button-label {
+  color: black;
+}
+.form-section-area::ng-deep.required {
+  color: red;
+}
+/* Validator Error */
+.form-section-area::ng-deep .p-error {
+  display: flex;
+}
+@media only screen and (max-width: 2685px) {
+  .create-task app-dynamic-form {
+    column-gap: 11rem;
+  }
+  .form-section-area::ng-deep .p-multiselect.p-component.p-multiselect-chip {
+    width: 500px;
+  }
+  .form-section-area::ng-deep .p-calendar {
+    width: 500px;
+  }
+  .form-section-area::ng-deep .p-dropdown.p-component.p-dropdown {
+    width: 500px;
+  }
+  .form-section-area::ng-deep
+    input.p-inputtext.p-component.p-element.p-inputtext-md.col-md-12 {
+    width: 500px;
+  }
+  .form-section-area::ng-deep
+    span.p-ripple.p-element.p-button.p-component.p-fileupload-choose.p-button-icon-only {
+    width: 500px;
+  }
+  .form-section-area::ng-deep
+    textarea.p-inputtextarea.p-inputtext.p-component.p-element.col-md-12 {
+    width: 500px;
+  }
+}
+@media only screen and (max-width: 2503px) {
+  .create-task app-dynamic-form {
+    column-gap: 25rem;
+  }
+}
+@media only screen and (max-width: 2046px) {
+  .create-task app-dynamic-form {
+    column-gap: 12rem;
+  }
+}
+@media only screen and (max-width: 1835px) {
+  .create-task app-dynamic-form {
+    column-gap: 8rem;
+  }
+  .form-section-area {
+    padding-right: 50px;
+    padding-left: 75px;
+  }
+}
+@media only screen and (max-width: 1754px) {
+  .form-section-area {
+    padding-right: 30px;
+  }
+}
+@media only screen and (max-width: 1640px) {
+  .form-section-area::ng-deep .p-multiselect.p-component.p-multiselect-chip {
+    width: 450px;
+  }
+  .form-section-area::ng-deep .p-calendar {
+    width: 450px;
+  }
+  .form-section-area::ng-deep .p-dropdown.p-component.p-dropdown {
+    width: 450px;
+  }
+  .form-section-area::ng-deep
+    input.p-inputtext.p-component.p-element.p-inputtext-md.col-md-12 {
+    width: 450px;
+  }
+  .form-section-area::ng-deep
+    span.p-ripple.p-element.p-button.p-component.p-fileupload-choose.p-button-icon-only {
+    width: 450px;
+  }
+  .form-section-area::ng-deep
+    textarea.p-inputtextarea.p-inputtext.p-component.p-element.col-md-12 {
+    width: 450px;
+  }
+}
+@media only screen and (max-width: 1540px) {
+  .form-section-area::ng-deep .p-multiselect.p-component.p-multiselect-chip {
+    width: 400px;
+  }
+  .form-section-area::ng-deep .p-calendar {
+    width: 400px;
+  }
+  .form-section-area::ng-deep .p-dropdown.p-component.p-dropdown {
+    width: 400px;
+  }
+  .form-section-area::ng-deep
+    input.p-inputtext.p-component.p-element.p-inputtext-md.col-md-12 {
+    width: 400px;
+  }
+  .form-section-area::ng-deep
+    span.p-ripple.p-element.p-button.p-component.p-fileupload-choose.p-button-icon-only {
+    width: 400px;
+  }
+  .form-section-area::ng-deep
+    textarea.p-inputtextarea.p-inputtext.p-component.p-element.col-md-12 {
+    width: 400px;
+  }
+}
+@media only screen and (max-width: 1442px) {
+  .form-section-area::ng-deep .p-multiselect.p-component.p-multiselect-chip {
+    width: 350px;
+  }
+  .form-section-area::ng-deep .p-calendar {
+    width: 350px;
+  }
+  .form-section-area::ng-deep .p-dropdown.p-component.p-dropdown {
+    width: 350px;
+  }
+  .form-section-area::ng-deep
+    input.p-inputtext.p-component.p-element.p-inputtext-md.col-md-12 {
+    width: 350px;
+  }
+  .form-section-area::ng-deep
+    span.p-ripple.p-element.p-button.p-component.p-fileupload-choose.p-button-icon-only {
+    width: 350px;
+  }
+  .form-section-area::ng-deep
+    textarea.p-inputtextarea.p-inputtext.p-component.p-element.col-md-12 {
+    width: 350px;
+  }
+}
+@media only screen and (max-width: 1344px) {
+  .form-section-area::ng-deep .p-multiselect.p-component.p-multiselect-chip {
+    width: 300px;
+  }
+  .form-section-area::ng-deep .p-calendar {
+    width: 300px;
+  }
+  .form-section-area::ng-deep .p-dropdown.p-component.p-dropdown {
+    width: 300px;
+  }
+  .form-section-area::ng-deep
+    input.p-inputtext.p-component.p-element.p-inputtext-md.col-md-12 {
+    width: 300px;
+  }
+  .form-section-area::ng-deep
+    span.p-ripple.p-element.p-button.p-component.p-fileupload-choose.p-button-icon-only {
+    width: 300px;
+  }
+  .form-section-area::ng-deep
+    textarea.p-inputtextarea.p-inputtext.p-component.p-element.col-md-12 {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 1254px) {
+  .form-section-area::ng-deep .p-multiselect.p-component.p-multiselect-chip {
+    width: 250px;
+  }
+  .form-section-area::ng-deep .p-calendar {
+    width: 250px;
+  }
+  .form-section-area::ng-deep .p-dropdown.p-component.p-dropdown {
+    width: 250px;
+  }
+  .form-section-area::ng-deep
+    input.p-inputtext.p-component.p-element.p-inputtext-md.col-md-12 {
+    width: 250px;
+  }
+  .form-section-area::ng-deep
+    span.p-ripple.p-element.p-button.p-component.p-fileupload-choose.p-button-icon-only {
+    width: 250px;
+  }
+  .form-section-area::ng-deep
+    textarea.p-inputtextarea.p-inputtext.p-component.p-element.col-md-12 {
+    width: 250px;
+  }
+}
+@media only screen and (max-width: 1156px) {
+  .create-task app-dynamic-form {
+    column-gap: 5rem;
+    display: flex;
+    justify-content: center;
+  }
+  .form-section-area {
+    padding-left: 70px;
+  }
+  .form-section-area::ng-deep .p-multiselect.p-component.p-multiselect-chip {
+    width: 200px;
+  }
+  .form-section-area::ng-deep .p-calendar {
+    width: 200px;
+  }
+  .form-section-area::ng-deep .p-dropdown.p-component.p-dropdown {
+    width: 200px;
+  }
+  .form-section-area::ng-deep
+    input.p-inputtext.p-component.p-element.p-inputtext-md.col-md-12 {
+    width: 200px;
+  }
+  .form-section-area::ng-deep
+    span.p-ripple.p-element.p-button.p-component.p-fileupload-choose.p-button-icon-only {
+    width: 200px;
+  }
+  .form-section-area::ng-deep
+    textarea.p-inputtextarea.p-inputtext.p-component.p-element.col-md-12 {
+    width: 200px;
+  }
+}
+@media only screen and (max-width: 1015px) {
+  .form-section-area {
+    padding-right: 40px;
+    padding-left: 50px;
+    padding-bottom: 40px;
+  }
+  .form-section {
+    padding-right: 40px;
+    padding-left: 45px;
+  }
+  .form-section-area::ng-deep .p-multiselect.p-component.p-multiselect-chip {
+    width: 450px;
+  }
+  .form-section-area::ng-deep .p-calendar {
+    width: 450px;
+  }
+  .form-section-area::ng-deep .p-dropdown.p-component.p-dropdown {
+    width: 450px;
+  }
+  .form-section-area::ng-deep
+    input.p-inputtext.p-component.p-element.p-inputtext-md.col-md-12 {
+    width: 450px;
+  }
+  .form-section-area::ng-deep
+    span.p-ripple.p-element.p-button.p-component.p-fileupload-choose.p-button-icon-only {
+    width: 450px;
+  }
+  .form-section-area::ng-deep
+    textarea.p-inputtextarea.p-inputtext.p-component.p-element.col-md-12 {
+    width: 450px;
+  }
+}
+@media only screen and (max-width: 860px) {
+  .form-section-area::ng-deep .p-multiselect.p-component.p-multiselect-chip {
+    width: 400px;
+  }
+  .form-section-area::ng-deep .p-calendar {
+    width: 400px;
+  }
+  .form-section-area::ng-deep .p-dropdown.p-component.p-dropdown {
+    width: 400px;
+  }
+  .form-section-area::ng-deep
+    input.p-inputtext.p-component.p-element.p-inputtext-md.col-md-12 {
+    width: 400px;
+  }
+  .form-section-area::ng-deep
+    span.p-ripple.p-element.p-button.p-component.p-fileupload-choose.p-button-icon-only {
+    width: 400px;
+  }
+  .form-section-area::ng-deep
+    textarea.p-inputtextarea.p-inputtext.p-component.p-element.col-md-12 {
+    width: 400px;
+  }
+}
+@media only screen and (max-width: 806px) {
+  .form-section-area::ng-deep .p-multiselect.p-component.p-multiselect-chip {
+    width: 350px;
+  }
+  .form-section-area::ng-deep .p-calendar {
+    width: 350px;
+  }
+  .form-section-area::ng-deep .p-dropdown.p-component.p-dropdown {
+    width: 350px;
+  }
+  .form-section-area::ng-deep
+    input.p-inputtext.p-component.p-element.p-inputtext-md.col-md-12 {
+    width: 350px;
+  }
+  .form-section-area::ng-deep
+    span.p-ripple.p-element.p-button.p-component.p-fileupload-choose.p-button-icon-only {
+    width: 350px;
+  }
+  .form-section-area::ng-deep
+    textarea.p-inputtextarea.p-inputtext.p-component.p-element.col-md-12 {
+    width: 350px;
+  }
+}
+@media only screen and (max-width: 766px) {
+  .form-section-area::ng-deep .p-multiselect.p-component.p-multiselect-chip {
+    width: 400px;
+  }
+  .form-section-area::ng-deep .p-calendar {
+    width: 400px;
+  }
+  .form-section-area::ng-deep .p-dropdown.p-component.p-dropdown {
+    width: 400px;
+  }
+  .form-section-area::ng-deep
+    input.p-inputtext.p-component.p-element.p-inputtext-md.col-md-12 {
+    width: 400px;
+  }
+  .form-section-area::ng-deep
+    span.p-ripple.p-element.p-button.p-component.p-fileupload-choose.p-button-icon-only {
+    width: 400px;
+  }
+  .form-section-area::ng-deep
+    textarea.p-inputtextarea.p-inputtext.p-component.p-element.col-md-12 {
+    width: 400px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .form-section-area::ng-deep .p-multiselect.p-component.p-multiselect-chip {
+    width: 350px;
+  }
+  .form-section-area::ng-deep .p-calendar {
+    width: 350px;
+  }
+  .form-section-area::ng-deep .p-dropdown.p-component.p-dropdown {
+    width: 350px;
+  }
+  .form-section-area::ng-deep
+    input.p-inputtext.p-component.p-element.p-inputtext-md.col-md-12 {
+    width: 350px;
+  }
+  .form-section-area::ng-deep
+    span.p-ripple.p-element.p-button.p-component.p-fileupload-choose.p-button-icon-only {
+    width: 350px;
+  }
+  .form-section-area::ng-deep
+    textarea.p-inputtextarea.p-inputtext.p-component.p-element.col-md-12 {
+    width: 350px;
+  }
+}
+@media only screen and (max-width: 590px) {
+  .form-section {
+    padding-right: 30px;
+    padding-left: 35px;
+  }
+  .form-section-area::ng-deep .p-multiselect.p-component.p-multiselect-chip {
+    width: 270px;
+  }
+  .form-section-area::ng-deep .p-calendar {
+    width: 270px;
+  }
+  .form-section-area::ng-deep .p-dropdown.p-component.p-dropdown {
+    width: 270px;
+  }
+  .form-section-area::ng-deep
+    input.p-inputtext.p-component.p-element.p-inputtext-md.col-md-12 {
+    width: 270px;
+  }
+  .form-section-area::ng-deep
+    span.p-ripple.p-element.p-button.p-component.p-fileupload-choose.p-button-icon-only {
+    width: 270px;
+  }
+  .form-section-area::ng-deep
+    textarea.p-inputtextarea.p-inputtext.p-component.p-element.col-md-12 {
+    width: 270px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .form-section-area {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+  .form-section-area::ng-deep .p-multiselect.p-component.p-multiselect-chip {
+    width: 230px;
+  }
+  .form-section-area::ng-deep .p-calendar {
+    width: 230px;
+  }
+  .form-section-area::ng-deep .p-dropdown.p-component.p-dropdown {
+    width: 230px;
+  }
+  .form-section-area::ng-deep
+    input.p-inputtext.p-component.p-element.p-inputtext-md.col-md-12 {
+    width: 230px;
+  }
+  .form-section-area::ng-deep
+    span.p-ripple.p-element.p-button.p-component.p-fileupload-choose.p-button-icon-only {
+    width: 230px;
+  }
+  .form-section-area::ng-deep
+    textarea.p-inputtextarea.p-inputtext.p-component.p-element.col-md-12 {
+    width: 230px;
+  }
+}
+@media only screen and (max-width: 422px) {
+  .form-section-area::ng-deep .p-multiselect.p-component.p-multiselect-chip {
+    width: 170px;
+  }
+  .form-section-area::ng-deep .p-calendar {
+    width: 170px;
+  }
+  .form-section-area::ng-deep .p-dropdown.p-component.p-dropdown {
+    width: 170px;
+  }
+  .form-section-area::ng-deep
+    input.p-inputtext.p-component.p-element.p-inputtext-md.col-md-12 {
+    width: 170px;
+  }
+  .form-section-area::ng-deep
+    span.p-ripple.p-element.p-button.p-component.p-fileupload-choose.p-button-icon-only {
+    width: 170px;
+  }
+  .form-section-area::ng-deep
+    textarea.p-inputtextarea.p-inputtext.p-component.p-element.col-md-12 {
+    width: 170px;
+  }
+}
+
+@media only screen and (max-width: 385px) {
+  .form-section {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+@media only screen and (max-width: 335px) {
+  .form-section-area {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}

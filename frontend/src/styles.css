@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter/Inter.ttf");
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Inter";
+}
+
+:root {
+  --sidePanel-bg-color: rgba(0, 120, 212, 1);
+  --main-bg-color: #f8f8f8;
+}
+
+/* css for styling scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #d2d3d6;
+  border-radius: 20px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(186, 186, 186);
+}
